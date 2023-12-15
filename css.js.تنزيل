@@ -1,0 +1,46 @@
+function finalizeCss() {
+	$('.accordion-text').css('display', 'none');
+	$('.accordion-state-indicator').html('+');
+	
+	var totalHeight = $('body').height();
+	var totalWidth = $('body').width();
+	
+	if (!isMediaQueriesSupported()) { 
+	
+		if (totalWidth >= 350) {
+			
+			if (totalHeight >= 700) {
+	
+				apply700MediaQuery();
+	
+			} else if (totalHeight >= 650) {
+				
+				apply650MediaQuery();
+	
+			} else if (totalHeight >= 600) {
+				
+				apply600MediaQuery();
+	
+			} else if (totalHeight >= 550) {
+				
+				apply550MediaQuery();
+	
+			}  else if (totalHeight >= 500) {
+	
+				apply500MediaQuery();
+	
+			} else if (totalHeight >= 450) {
+				
+				apply450MediaQuery();
+	
+			}  else {
+	
+				resetJSMediaQueries();
+	
+			}
+	
+		} else {
+			resetJSMediaQueries();
+		}
+	}
+}

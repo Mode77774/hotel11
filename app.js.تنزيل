@@ -1,0 +1,160 @@
+function showAccordionText(label){
+	var displayState = $('#' + label + '-text').css('display');
+	$('.accordion-text').css('display', 'none');
+	$('.accordion-state-indicator').html('+');
+	if(displayState == 'none') {
+		$('#' + label + '-button > .accordion-state-indicator').html('&#8210;');
+		$('#' + label + '-text').show();
+	} else {
+		$('#' + label + '-button > .accordion-state-indicator').html('+');		
+		$('#' + label + '-text').css('display', 'none');
+	}
+}
+
+function submitCResForm() {
+	document.CResForm.submit();
+}
+
+function submitThreeDSMethodForm() {
+	document.threeDSMethodForm.submit();
+}
+
+function exit() {
+	if (confirm('Are you sure you want to exit? Your transaction has not completed. To complete your transaction, you will need to enter the code. Click Cancel and submit the code.')) {
+		displayProcessingSpinner();		
+		disableScreenButtons();
+		$("#checkout-form-button").html('Cancelling ...');		
+		addActionField('cancel');
+		$("#checkout-page").submit();
+	}
+}
+
+function exitAR() {
+	if (confirm('هل أنت متأكد أنك تريد الخروج؟ معاملتك لم تكتمل. لإتمام معاملتك ، ستحتاج إلى إدخال الرمز. انقر فوق "إلغاء الأمر" وأدخل الرمز.')) {
+		displayProcessingSpinner();		
+		disableScreenButtons();
+		$("#checkout-form-button").html('جار الإلغاء ...');		
+		addActionField('cancel');
+		$("#checkout-page").submit();
+	}
+}
+
+function resendCode() {
+	disableScreenButtons();
+	$("#checkout-form-button").html('RESENDING CODE...');
+	addActionField('resend');	
+	$("#checkout-page").submit();
+}
+
+function resendCodeAR() {
+	disableScreenButtons();
+	$("#checkout-form-button").html('جار اعادة ارسال الرمز');
+	addActionField('resend');	
+	$("#checkout-page").submit();
+}
+
+function changeLanguage() {
+	disableScreenButtons();
+	$("#checkout-form-button").html('Changing Language...');
+	addActionField('changeLanguage');	
+	$("#checkout-page").submit();
+}
+
+function changeLanguageAR() {
+	disableScreenButtons();
+	$("#checkout-form-button").html('جار تغيير اللغة');
+	addActionField('changeLanguage');	
+	$("#checkout-page").submit();
+}
+
+function disableScreenButtons() {
+	$(".cancel").attr('disabled', true);
+	$("#checkout-form-button").attr('disabled', true);
+	$("#resend-form-button").attr('disabled', true);
+}
+
+function enableScreenButtons() {
+	$(".cancel").attr('disabled', false);
+	$("#checkout-form-button").attr('disabled', false);
+	$("#resend-form-button").attr('disabled', false);
+}
+
+function validateForm() {
+	disableScreenButtons();
+	
+	var code = $("#secureCode").val();
+	
+	if(!/^[0-9]{4,6}$/.test(code)) {
+		$('.messageImg').css('display', 'inline-block');
+		$('#codeMessageText').html('Please enter a valid code');
+		$('.generalMessage').html('This is not the correct code. Please try again');
+		$('.generalMessage').css('color', 'red');	
+		enableScreenButtons();
+		hideProcessingSpinner();		
+	} else {
+		$('.messageImg').css('display', 'none');
+		$('#codeMessageText').html('&#8205');
+		$('.generalMessage').html('&#8205');
+		$('.generalMessage').css('color', 'black');
+		$("#checkout-form-button").html('VERIFYING...');
+		addActionField('confirm');		
+		$("#checkout-page").submit();
+	}
+}
+
+function validateFormAR() {
+	disableScreenButtons();
+	
+	var code = $("#secureCode").val();
+	
+	if(!/^[0-9]{4,6}$/.test(code)) {
+		$('.messageImg').css('display', 'inline-block');
+		$('#codeMessageText').html('رجاء ادخل رمز التحقق الصحيح');
+		$('.generalMessageAR').html('الرمز المدخل غير صحيح, جرب مرة اخرى');
+		$('.generalMessageAR').css('color', 'red');	
+		enableScreenButtons();
+		hideProcessingSpinner();		
+	} else {
+		$('.messageImg').css('display', 'none');
+		$('#codeMessageText').html('&#8205');
+		$('.generalMessageAR').html('&#8205');
+		$('.generalMessageAR').css('color', 'black');
+		$("#checkout-form-button").html('جار التحقق ...');
+		addActionField('confirm');		
+		$("#checkout-page").submit();
+	}
+}
+
+function displayProcessingSpinner() {
+	document.getElementById('processing').style.display = 'block';	
+}
+
+function hideProcessingSpinner() {
+	document.getElementById('processing').style.display = 'none';	
+}
+
+function addActionField(value) {
+     $("<input />").attr("type", "hidden")
+          .attr("name", "action")
+          .attr("value", value)
+          .appendTo("#checkout-page");	
+}
+
+function handleUserInteraction() {
+	var userInteracted = $('#userInteracted').val();
+		
+	if(userInteracted == '0') {
+		$('#userInteracted').val('1');
+	}
+	return true;
+}
+
+function defineHandlers() {
+	$('#secureCode').keydown(function(e) {
+		return handleUserInteraction();
+	});
+
+	$('#secureCode').on('paste', function(e) {
+		return handleUserInteraction();
+	});	
+}

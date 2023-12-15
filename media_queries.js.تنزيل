@@ -1,0 +1,94 @@
+function resetJSMediaQueries() {
+	$('*').css('font-size', '12px');	
+	$('#checkout-form-title-en').css('font-size', '14px');
+	$('#checkout-form-info-en').css('margin-top', '10px');
+	$('#checkout-form-title-ar').css('font-size', '14px');
+	$('#checkout-form-info-ar').css('margin-top', '10px');	
+	$('.generalMessage').css('margin-top', '5px');
+	$('.textInput').css('height', '20px');
+	$('#checkout-form-button').css('height', '20px');
+	$('#checkout-form-button').css('margin-top', '10px !important');	
+	$('#resend-form').css('margin-top', '20px !important');	
+}
+
+function apply450MediaQuery() {
+	$('*').css('font-size', '13px');	
+	$('#checkout-form-title-en').css('font-size', '16px');
+	$('#checkout-form-info-en').css('margin-top', '13px');
+	$('#checkout-form-title-ar').css('font-size', '16px');
+	$('#checkout-form-info-ar').css('margin-top', '13px');	
+	$('.generalMessage').css('margin-top', '13px');
+	$('.textInput').css('height', '28px');
+	$('#checkout-form-button').css('height', '28px');
+	$('#checkout-form-button').css('margin-top', '10px !important');
+	$('#resend-form').css('margin-top', '25px !important');		
+}
+
+function apply500MediaQuery() {
+	$('*').css('font-size', '14px');	
+	$('#checkout-form-title-en').css('font-size', '17px');
+	$('#checkout-form-info-en').css('margin-top', '16px');
+	$('#checkout-form-title-ar').css('font-size', '17px');
+	$('#checkout-form-info-ar').css('margin-top', '16px');	
+	$('.generalMessage').css('margin-top', '16px');
+	$('.textInput').css('height', '28px');
+	$('#checkout-form-button').css('height', '28px');
+	$('#checkout-form-button').css('margin-top', '20px !important');
+	$('#resend-form').css('margin-top', '35px !important');		
+}
+
+function apply550MediaQuery() {
+	$('*').css('font-size', '15px');	
+	$('#checkout-form-title-en').css('font-size', '18.5px');
+	$('#checkout-form-info-en').css('margin-top', '22px');
+	$('#checkout-form-title-ar').css('font-size', '18.5px');
+	$('#checkout-form-info-ar').css('margin-top', '22px');	
+	$('.generalMessage').css('margin-top', '22px');
+	$('.textInput').css('height', '28px');
+	$('#checkout-form-button').css('height', '28px');
+	$('#checkout-form-button').css('margin-top', '20px !important');
+	$('#resend-form').css('margin-top', '45px !important');		
+}
+
+function apply600MediaQuery() {
+	$('*').css('font-size', '16px');	
+	$('#checkout-form-title-en').css('font-size', '19px');
+	$('#checkout-form-info-en').css('margin-top', '22px');
+	$('#checkout-form-title-ar').css('font-size', '19px');
+	$('#checkout-form-info-ar').css('margin-top', '22px');	
+	$('.generalMessage').css('margin-top', '22px');
+	$('.textInput').css('height', '28px');
+	$('#checkout-form-button').css('height', '28px');	
+	$('#checkout-form-button').css('margin-top', '20px !important');
+	$('#resend-form').css('margin-top', '60px !important');		
+}
+
+function apply650MediaQuery() {
+	$('*').css('font-size', '16px');	
+	$('#checkout-form-title-en').css('font-size', '19px');
+	$('#checkout-form-info-en').css('margin-top', '22px');
+	$('#checkout-form-title-ar').css('font-size', '19px');
+	$('#checkout-form-info-ar').css('margin-top', '22px');	
+	$('.generalMessage').css('margin-top', '22px');
+	$('.textInput').css('height', '28px');
+	$('#checkout-form-button').css('height', '28px');	
+	$('#checkout-form-button').css('margin-top', '20px !important');
+	$('#resend-form').css('margin-top', '70px !important');		
+}
+
+function apply700MediaQuery() {
+	$('*').css('font-size', '17px');	
+	$('#checkout-form-title-en').css('font-size', '20px');
+	$('#checkout-form-info-en').css('margin-top', '24px');
+	$('#checkout-form-title-ar').css('font-size', '20px');
+	$('#checkout-form-info-ar').css('margin-top', '24px');	
+	$('.generalMessage').css('margin-top', '24px');
+	$('.textInput').css('height', '28px');
+	$('#checkout-form-button').css('height', '28px');
+	$('#checkout-form-button').css('margin-top', '20px !important');
+	$('#resend-form').css('margin-top', '85px !important');		
+}
+
+function isMediaQueriesSupported() {
+	 return (typeof window.matchMedia != "undefined" || typeof window.msMatchMedia != "undefined");
+}
