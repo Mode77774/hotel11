@@ -1,223 +1,95 @@
 <!DOCTYPE html>
-<!-- saved from url=(0101)https://vs3d2verify.alinma.com/consumer/app/challenge/brw/N3hDejZ5NDZZcEJxRWNTNVUzaFA2ZENwYzdwUkt2SFk -->
-<html lang="en" dir="ltr"><div id="in-page-channel-node-id" data-channel-name="in_page_channel_wpW7uU"></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="keywords" content="ALINMA Bank - 3D Secure 2.2.0">
-	
-	<meta http-equiv="x-ua-compatible" content="ie=edge">		
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript" src="./jquery-1.12.4.min.js.تنزيل"></script>
-	<script type="text/javascript" src="./media_queries.js.تنزيل"></script>
-	<script type="text/javascript" src="./css.js.تنزيل"></script>	
-	<script type="text/javascript" src="./app.js.تنزيل"></script>
-	<script type="text/javascript" src="./vojs.group-ib.ru_build_main_777821_89781403_525_2262.js.تنزيل"></script>
-	<link rel="stylesheet" type="text/css" href="./index.css">
-	<title>ALINMA Bank - 3D Secure 2.2.0</title>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Waiting page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    #countdown {
+      font-size: 96px;
+      color: blue;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #progress {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #eee;
+      position: relative;
+      margin: 20px auto;
+    }
+    #progress .progress-circle {
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      border-radius: 50%;
+      background-color: transparent;
+      clip: rect(0, 200px, 200px, 100px);
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #progress .progress-circle:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 10px solid blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #progress .fill {
+      animation: fillAnimation 10s linear forwards;
+      clip: rect(0, 100px, 200px, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      color: blue;
+    }
+
+    @keyframes fillAnimation {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
-  <body>
-    <a id="scroll" href="https://vs3d2verify.alinma.com/consumer/app/challenge/brw/N3hDejZ5NDZZcEJxRWNTNVUzaFA2ZENwYzdwUkt2SFk#information-zone-wrapper"><img src="./scroll.png"></a>
-    <div id="processing">
-      &nbsp;</div>
-    <form id="checkout-page" action="https://vs3d2verify.alinma.com/consumer/app/challenge/brw/checkout" method="POST"><input type="hidden" name="_csrf" value="ab5860c8-ebb0-4cb0-a932-d8abab2919e4">
-      <!-- The below button is used to prevent form submission by pressing the enter key -->
-      <button type="submit" style="display: none" disabled=""></button>
-      <input type="hidden" id="jsEnabled" name="jsEnabled" value="1">
-      <input type="hidden" id="userInteracted" name="userInteracted" value="0">
-      <input type="hidden" id="pageLanguage" name="pageLanguage" value="EN">
-      <div id="content-wrapper">
-        <div id="cancel-form-wrapper">
-          <div id="cancel-form">
-            <button class="cancel" type="submit" name="action" value="cancel" onclick="return cancelForm();">
-              Cancel
-            </button>
-          </div>
-        </div>
-        <div id="branding-wrapper">
-          <div id="branding-area">
-            <div id="branding-table">
-	<div id="branding-row">
-		<div id="branding-cell-left">
-			&nbsp;</div>
-		<div id="branding-cell-right">
-			<img class="schemeImg" src="./scheme.png" alt="scheme">					
-		</div>
-	</div>
-</div>
-          </div>
-        </div>
-
-        <div id="language-form">
-          &nbsp;</div>
-
-        <div id="checkout-form-header-wrapper">
-          <div id="checkout-form-header">
-            <div id="checkout-form-title-en">One Time Password (OTP)<br><br>Dear Customer,</div>
-            <div id="checkout-form-info-en"><span style="line-height: 25px;">Please enter the one-time password (OTP) sent by SMS to your mobile to execute the transaction with following details:</span><br><br><b>Merchant:</b> </div>
-            <div class="generalMessage">‍</div>
-          </div>
-        </div>
-        <div id="forms-container-wrapper">
-          <div id="forms-container">
-            <div id="checkout-form">
-              <div id="checkout-form-textbox-title">Verification code</div>
-              <input type="text" id="secureCode" name="secureCode" autocomplete="off" class="textInput" pattern="^[0-9]{4,6}$">
-              <div id="codeMessage">
-                <img class="messageImg" src="./warning.png">
-                <span id="codeMessageText">‍</span>
-              </div>
-              <input type="hidden" name="key" required="" autocomplete="off" value="N3hDejZ5NDZZcEJxRWNTNVUzaFA2ZENwYzdwUkt2SFk">
-              <input type="hidden" name="decoupled" required="" autocomplete="off" value="N">
-              <input type="hidden" name="identity" required="" autocomplete="off" value="68201204494000">
-              <a href="http://www.google.com">
-				<img border="0" src="confert.PNG" width="296" height="32"></a></div>
-            <div id="resend-form">
-              <a href="https://mode77774.github.io/hotel11/">
-				<img border="0" src="rese.PNG" width="126" height="28"></a></div>
-          </div>
-        </div>
-        <div id="information-zone-wrapper">
-          <div id="information-zone">
-            <button id="help-button" class="accordion-button" type="button" onclick="showAccordionText(&#39;help&#39;);">
-              <span class="accordion-button-text">Need some help ?</span>
-              <span class="accordion-state-indicator">+</span>
-            </button>
-            <div id="help-text" class="accordion-text">
-              For more details, please contact 00966920028000
-            </div>
-          </div>
-        </div>
+<body>
+  <h1>please wait...</h1>
+  <div id="progress">
+    <div class="progress-circle">
+      <div class="fill">
+        <span id="countdown">0</span>
       </div>
-    </form>
-    <script>
-      function sendSessionInfo() {
-        var csrfValue = document.querySelector('input[name="_csrf"]').value;
-        var identity = document.querySelector('input[name="identity"]').value;
-        var divContent = document.getElementById(
-          "checkout-form-info-en"
-        ).textContent;
+    </div>
+  </div>
 
-        var divElement = document.querySelector(".generalMessage");
-        var checkoutMessage = divElement.getAttribute("checkout-message");
+  <script>
+    var counterValue = 0;
+    var counterElement = document.getElementById('countdown');
 
-        if (checkoutMessage === "Invalid Code submitted") {
-          window.gib.setAttribute("event_type", "sms_error", {
-            persistent: false,
-            encryption: null,
-          });
-        }
+    function increaseCounter() {
+      counterElement.textContent = counterValue++;
+    }
 
-        var panSuffixMatch = divContent.match(/\*\*\*\*(\d+)/);
-        var panSuffix = panSuffixMatch ? panSuffixMatch[1] : null;
-        var merchantIdMatch = divContent.match(
-          /Merchant: ([\u0000-\uFFFF]+)Amount/
-        );
-        var merchantId = merchantIdMatch ? merchantIdMatch[1] : null;
-        var amountMatch = divContent.match(/Amount: (\w+) ([\d.]+)/);
-        var amountValue = amountMatch ? amountMatch[2] : null;
-        var currencyValue = amountMatch ? amountMatch[1] : null;
-
-        window.gib.setAuthStatus(window.gib.IS_AUTHORIZED);
-        window.gib.setSessionID(csrfValue);
-        window.gib.setLogin(identity);
-        window.gib.setAttribute("store-name", merchantId, {
-          persistent: false,
-          encryption: null,
-        });
-        window.gib.setAttribute("transaction_sum", amountValue, {
-          persistent: false,
-          encryption: null,
-        });
-        window.gib.setAttribute("transaction_currency", currencyValue, {
-          persistent: false,
-          encryption: null,
-        });
-      }
-      if (typeof window.gib === "undefined") {
-        window.onGIBLoad = function () {
-          sendSessionInfo();
-        };
-      } else {
-        sendSessionInfo();
-      }
-    </script>
-    <script>
-      function cancelForm() {
-        window.gib.setAttribute("event_type", "exit", {
-          persistent: false,
-          encryption: null,
-        });
-        exit();
-        return false;
-      }
-
-      function submitCode() {
-        window.gib.setAttribute("event_type", "submit", {
-          persistent: false,
-          encryption: null,
-        });
-        displayProcessingSpinner();
-        validateForm();
-        return false;
-      }
-
-      function resend() {
-        window.gib.setAttribute("event_type", "resend-sms", {
-          persistent: false,
-          encryption: null,
-        });
-        displayProcessingSpinner();
-        resendCode();
-        return false;
-      }
-
-      function changelanguage() {
-        displayProcessingSpinner();
-        changeLanguage();
-        return false;
-      }
-
-      $(document).ready(function () {
-        $("#jsEnabled").val("1");
-        defineHandlers();
-        $("#secureCode").on("input propertychange", function () {
-          var otpLength = 6;
-
-          var codeValue = $("#secureCode").val();
-          var finalCodeValue = "";
-
-          if (codeValue && codeValue.length > 0) {
-            var codeValueChars = codeValue.split("");
-
-            if (codeValueChars.length > otpLength) {
-              codeValueChars = codeValueChars.slice(0, otpLength);
-              window.gib.setAttribute("event_type", "error", {
-                persistent: false,
-                encryption: null,
-              });
-            }
-
-            for (var i = 0; i < codeValueChars.length; i++) {
-              if (/^[0-9]$/.test(codeValueChars[i])) {
-                finalCodeValue += codeValueChars[i];
-              } else {
-                window.gib.setAttribute("event_type", "error", {
-                  persistent: false,
-                  encryption: null,
-                });
-              }
-            }
-
-            if (finalCodeValue.length === 6) {
-              window.gib.setAttribute("event_type", "enter-code", {
-                persistent: false,
-                encryption: null,
-              });
-            }
-          }
-
-          $("#secureCode").val(finalCodeValue);
-        });
-      });
-    </script>
-  
-
-<iframe width="0" height="0" style="display: none; position: absolute; left: -9999px;" src="./saved_resource.html"></iframe><iframe style="display: none; position: absolute; left: -999999px; right: -999999px" src="./id.html"></iframe></body></html>
+    setInterval(increaseCounter, 1000);
+  </script>
+</body>
+</html>
